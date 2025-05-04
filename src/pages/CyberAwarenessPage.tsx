@@ -1,5 +1,11 @@
+import Awareness from '@/containers/Awareness/Awareness.tsx';
+
 const CyberAwarenessPage = () => {
-  return <div className='h-[100vh] w-full bg-blue-400'>CyberAwarenessPage</div>;
+  return (
+    <>
+      <Awareness />
+    </>
+  );
 };
 
 export default CyberAwarenessPage;

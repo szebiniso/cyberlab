@@ -11,8 +11,8 @@ const Header = () => {
   ];
 
   return (
-    <header className='bg-black w-full m-auto'>
-      <nav className='flex justify-between items-center w-full p-6 container m-auto'>
+    <header className='bg-black w-full px-14'>
+      <nav className='flex justify-between items-center w-full py-6'>
         <Link to='/'>
           <img src={logo} alt='CyberXLAB Logo' className='h-5 w-auto' />
         </Link>
