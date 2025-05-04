@@ -1,5 +1,11 @@
+import SchoolRanking from '@/containers/SchoolRanking/SchoolRanking.tsx';
+
 const SchoolRankingsPage = () => {
-  return <div className='h-[100vh] w-full bg-blue-400'>SchoolRankingsPage</div>;
+  return (
+    <div>
+      <SchoolRanking />
+    </div>
+  );
 };
 
 export default SchoolRankingsPage;
