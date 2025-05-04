@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const SearchWithFilters = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   // Categories data
   const categories = [
@@ -17,7 +17,7 @@ const SearchWithFilters = () => {
   ];
 
   // Handle category selection
-  const handleCategoryClick = (category: never) => {
+  const handleCategoryClick = (category: string) => {
     setSelectedCategory(selectedCategory === category ? null : category);
   };
 
