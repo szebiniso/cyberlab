@@ -23,21 +23,28 @@ export default function CybersecurityPlatform() {
   ];
 
   return (
-    <div className='h-fit pb-16 bg-black text-white'>
+    <div className='bg-black text-white pb-16'>
       {/* Hero Section */}
-      <div className='pt-16 pb-5 px-8'>
-        <h1 className='text-5xl font-medium mb-8'>Become a Cybersecurity Master</h1>
-        <h2 className='text-4xl font-medium'>What You Can Do Here</h2>
+      <div className='pt-14 pb-8 px-4 sm:px-6 md:px-10 lg:px-16 text-center md:text-left'>
+        <h1 className='text-3xl sm:text-4xl md:text-5xl font-medium mb-6'>
+          Become a Cybersecurity Master
+        </h1>
+        <h2 className='text-2xl sm:text-3xl md:text-4xl font-medium'>What You Can Do Here</h2>
       </div>
 
-      {/* Navigation Sections */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-        {sections.map((section) => (
-          <div key={section.id} className='border-t border-r w-fit grid-1 border-[#262626] p-12'>
-            <div className='flex items-center gap-3 mb-2'>
-              <h3 className='text-4xl font-semibold whitespace-nowrap'>{section.title}</h3>
-            </div>
-            <p className='text-gray-400 text-2xl font-normal'>{section.description}</p>
+      {/* Section Cards */}
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'>
+        {sections.map((section, index) => (
+          <div
+            key={section.id}
+            className={`border-t ${index % 2 !== 1 && 'sm:border-r'} ${
+              index < 2 && 'lg:border-b'
+            } border-[#262626] p-8 sm:p-10 lg:p-12`}
+          >
+            <h3 className='text-2xl sm:text-3xl lg:text-4xl font-semibold mb-2'>{section.title}</h3>
+            <p className='text-gray-400 text-base sm:text-lg lg:text-2xl font-normal'>
+              {section.description}
+            </p>
           </div>
         ))}
       </div>

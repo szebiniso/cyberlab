@@ -5,7 +5,6 @@ const SearchWithFilters = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  // Categories data
   const categories = [
     'Social Engineering',
     'Fishing',
@@ -16,15 +15,13 @@ const SearchWithFilters = () => {
     'Guide',
   ];
 
-  // Handle category selection
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(selectedCategory === category ? null : category);
   };
 
   return (
-    <div className='min-h-screen bg-black flex flex-col items-center'>
-      {/* Search Bar */}
-      <div className='w-full max-w-lg relative mb-4'>
+    <div className='bg-black flex flex-col items-center'>
+      <div className='w-full lg:max-w-lg relative mb-4'>
         <input
           type='text'
           placeholder='Search...'
@@ -37,20 +34,18 @@ const SearchWithFilters = () => {
         </div>
       </div>
 
-      {/* Categories Header */}
-      <div className='w-full max-w-lg border border-[#119822] rounded-md mb-4'>
+      <div className='w-full lg:max-w-lg border border-[#119822] rounded-md mb-4'>
         <h2 className='text-white font-medium text-sm leading-[100%] py-2 text-center'>
           Categories
         </h2>
       </div>
 
-      {/* Categories Grid */}
-      <div className='w-full max-w-lg space-y-2 flex flex-wrap gap-2'>
+      <div className='w-full lg:max-w-lg flex flex-wrap gap-2'>
         {categories.map((category, index) => (
           <div
             key={index}
             className={`
-              py-2 whitespace-nowrap flex-auto px-4 rounded-md bg-[#FFFFFF21] cursor-pointer
+              py-2 whitespace-nowrap flex-auto px-4 rounded-md bg-[#FFFFFF21] cursor-pointer mb-2
               ${selectedCategory === category ? 'bg-[#119822] border border-[#119822]' : ''}
               ${index === categories.length - 1 && categories.length % 2 !== 0 ? 'col-span-2' : ''}
             `}
